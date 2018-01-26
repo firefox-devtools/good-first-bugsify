@@ -72,11 +72,31 @@ If you have any questions, get in touch with us via our Slack: https://devtools-
 Thank you for contributing to DevTools. You're great!`;
 
 	commentArea.value += '\n\n' + safetyString;
+	
+	let pendingGaps = document.createElement('div');
+	commentArea.parentNode.insertBefore(pendingGaps, commentArea.nextSibling);
+
 
 	setCommitEnabled(false);
 
+	// Finds template 'gaps' by looking for any [{...}] block, in the whole text.
+	// Note: the ? makes the search not greedy so it doesn't capture all the blocks in just one by letting the inner }][{ be subsumed into just one big result.
+	let re = /(\[\{.+?\}\])/g;
+
 	commentArea.oninput = () => {
-		let ok = (commentArea.value.indexOf(safetyString) === -1);
+		let text = commentArea.value;
+
+		let ok = true;
+		ok = ok && (text.indexOf(safetyString) === -1);
+
+		let gaps = text.match(re);
+		// If there are no matches, the result is null, not an empty Array
+		ok = ok && (gaps === null); 
+		
+		if(gaps) {
+			pendingGaps.innerHTML = gaps.length + ' to fill: <ul>' + gaps.map((g) => `<li>${g}</li>`).join('\n') + '</ul>';
+		}
+
 		setCommitEnabled(ok);
 	};
 

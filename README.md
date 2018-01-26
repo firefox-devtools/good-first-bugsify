@@ -1,18 +1,18 @@
-# good-first-bugsify (for Firefox Developer Tools)
+# good-first-bugsify
 
 This is a WebExtension to help you mark Firefox Developer Tools bugs in Bugzilla as good first bugs.
 
-For potential contributors, this helps them discover bug opportunities easily, and it is also clearer to them what needs to be done. For people who like to play and experiment with code before they dare asking in forums or chats, this is very important.
+*For potential contributors*, this helps them discover bug opportunities easily, and it is also clearer to them what needs to be done. For people who like to play and experiment with code before they dare asking in forums or chats, this is very important.
 
-For Developer Tools bug triagers, it alleviates some of the hassle that involves turning a bug into actionable, by providing a template with the repetitive information that needs to be present in a bug, and allowing them to just focus on describing what needs to be done for _that_ bug only. Not having to think of a structure also frees time and mental space that you don't want to sacrifice wondering if you maybe forgot to add something to the bug description.
+*For Developer Tools bug triagers*, it alleviates some of the hassle that involves turning a bug into actionable, by providing a template with the repetitive information that needs to be present in a bug, and allowing them to focus on describing what needs to be done for _that_ bug only. Not having to think of a structure each time also frees mental space that you'd otherwise spend agonising over if you maybe forgot to add something to the bug description.
 
 So it's a win/win for everyone! :-)
 
 ## Installing
 
-### From addons.mozilla.org
+<!--### From addons.mozilla.org
 
-You can install it from [its page](TODO) in addons.mozilla.org.
+You can install it from [its page](TODO) in addons.mozilla.org.-->
 
 ### From source
 
@@ -38,11 +38,13 @@ When you click the button, a number of things will happen:
 
 1. If the bug was not marked as `good-first-bug` yet, we add that string to the `keywords` field in the form.
 2. We insert a skeleton response into the `comment` field. This helps you make the bug actionable by giving you a template structure with most of the links to documentation such as getting started and testing, and also leaves a bunch of gaps for you to fill in with data relevant to this specific bug.
-3. We disable the `Save changes` button until you remove the last line in the comment. This is to ensure you don't accidentally mark bugs as 'good' without filling in all the required data.
+3. We disable the `Save changes` button until you fill in all the gaps AND remove the last line in the comment. This is to ensure you mark bugs as 'good' very intentionally, and provide all the required data.
 
 ## Contributing and code walkthrough
 
-The code is all in [main.js](./main.js) right now. Fancy? No! Simple? Yes! And it has inline comments! Wow!
+The code is all in [main.js](./main.js) right now.
+
+Fancy? No! Simple? Yes! And it has inline comments! Wow!
 
 ### `insertButton`
 
