@@ -34,11 +34,15 @@ You can also use the [web-ext command line tool](https://developer.mozilla.org/e
 
 Once installed, each time you go to a bug page in Mozilla's Bugzilla installation (while logged in), a `Make this a good first bug` button will be inserted alongside the `Save Changes` button that allows you to send a comment to the bug.
 
+!["Good-first-bugsify" button inserted into BMO pages](./images/button.png)
+
 When you click the button, a number of things will happen:
 
 1. If the bug was not marked as `good-first-bug` yet, we add that string to the `keywords` field in the form.
 2. We insert a skeleton response into the `comment` field. This helps you make the bug actionable by giving you a template structure with most of the links to documentation such as getting started and testing, and also leaves a bunch of gaps for you to fill in with data relevant to this specific bug.
 3. We disable the `Save changes` button until you fill in all the gaps AND remove the last line in the comment. This is to ensure you mark bugs as 'good' very intentionally, and provide all the required data.
+
+![A counter keeps track of the missing information. Send button disabled until everything has been filled](./images/comment.png)
 
 ## Contributing and code walkthrough
 
