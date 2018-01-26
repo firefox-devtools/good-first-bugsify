@@ -21,7 +21,7 @@ If you want to contribute, you can also check out the code and run it locally.
 To get the code, clone this repository first:
 
 ```bash
-git clone TODO
+git clone https://github.com/devtools-html/good-first-bugsify.git
 ```
 
 Then open a new tab and go to [about:debugging#addons](about:debugging#addons) in your Firefox browser. Click on the `Load Temporary Add-on` button, and navigate to the folder that contains the source code you just downloaded.
