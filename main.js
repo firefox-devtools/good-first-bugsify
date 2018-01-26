@@ -1,5 +1,5 @@
 // The manifest enforces that this extension is loaded only on sites like
-// enable icon in urls like https://bugzilla.mozilla.org/show_bug.cgi?id=... only
+// https://bugzilla.mozilla.org/show_bug.cgi?id=... only
 
 let button;
 let commit;
