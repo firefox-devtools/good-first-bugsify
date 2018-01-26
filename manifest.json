@@ -5,7 +5,8 @@
   "version": "1.0",
   "description": "Turns a bug into a good first bug, labelling it adequately and adding a comment with instructions for contributors to get started with the bug.",
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/icon@1x.png",
+    "96": "icons/icon@2x.png"
   },
   "content_scripts": [
     {
