@@ -1,0 +1,17 @@
+{
+
+  "manifest_version": 2,
+  "name": "Good First Bugsify",
+  "version": "1.0",
+  "description": "Turns a bug into a good first bug, labelling it adequately and adding a comment with instructions for contributors to get started with the bug.",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://bugzilla.mozilla.org/show_bug.cgi?id=*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
