@@ -10,9 +10,9 @@ So it's a win/win for everyone! :-)
 
 ## Installing
 
-<!--### From addons.mozilla.org
+### From addons.mozilla.org
 
-You can install it from [its page](TODO) in addons.mozilla.org.-->
+You can install it from [its page](https://addons.mozilla.org/en-US/firefox/addon/good-first-bugsify/) in addons.mozilla.org.
 
 ### From source
 
