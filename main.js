@@ -100,6 +100,9 @@ Thank you for contributing to DevTools. You're great!`;
 		setCommitEnabled(ok);
 	};
 
+	// Also remove the button to make this a good first bug, because... do we really
+	// need to press it several times? Possibly not.
+	button.parentNode.removeChild(button);
 }
 
 function setCommitEnabled(value) {
