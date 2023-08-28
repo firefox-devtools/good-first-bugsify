@@ -17,7 +17,7 @@ function insertButton() {
 	if(commit && !button) {
 		button = document.createElement('button');
 		button.id = buttonId;
-		button.textContent = 'Make this a good first bug';
+		button.textContent = 'Undo';
 		commit.parentNode.insertBefore(button, commit);
 
 		button.addEventListener('click', (e) => {
